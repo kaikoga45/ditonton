@@ -1,1 +1,1 @@
-# ditonton
+[![Codemagic build status](https://api.codemagic.io/apps/6183f656f780e440d63fc82d/6183f656f780e440d63fc82c/status_badge.svg)](https://codemagic.io/apps/6183f656f780e440d63fc82d/6183f656f780e440d63fc82c/latest_build)
