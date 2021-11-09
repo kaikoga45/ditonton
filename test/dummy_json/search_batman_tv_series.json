@@ -1,0 +1,29 @@
+{
+    "page": 1,
+    "results": [
+      {
+        "backdrop_path": "/k5c2BlteWTYXffuBpUo5UGwmINJ.jpg",
+        "first_air_date": "2004-09-11",
+        "genre_ids": [
+          16,
+          10765,
+          9648,
+          10759
+        ],
+        "id": 2022,
+        "name": "The Batman",
+        "origin_country": [
+          "US"
+        ],
+        "original_language": "en",
+        "original_name": "The Batman",
+        "overview": "Bruce Wayne, The Batman -- billionaire by day, crime fighter by night -- joined on occasion by Robin and Batgirl.",
+        "popularity": 56.898,
+        "poster_path": "/t5mbrd79o89pYB8OQ4QPFNkIRPm.jpg",
+        "vote_average": 7.8,
+        "vote_count": 286
+      }
+    ],
+    "total_pages": 1,
+    "total_results": 19
+  }

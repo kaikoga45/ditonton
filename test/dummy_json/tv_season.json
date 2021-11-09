@@ -1,0 +1,92 @@
+{
+    "_id": "52571edf760ee3776a1df79f",
+    "air_date": "2004-09-11",
+    "episodes": [
+      {
+        "air_date": "2004-09-11",
+        "episode_number": 1,
+        "crew": [
+          {
+            "department": "Writing",
+            "job": "Writer",
+            "credit_id": "52571ee3760ee3776a1dfbef",
+            "adult": false,
+            "gender": 0,
+            "id": 74864,
+            "known_for_department": "Writing",
+            "name": "Duane Capizzi",
+            "original_name": "Duane Capizzi",
+            "popularity": 0.84,
+            "profile_path": null
+          },
+          {
+            "department": "Directing",
+            "job": "Director",
+            "credit_id": "52571ee1760ee3776a1df93f",
+            "adult": false,
+            "gender": 2,
+            "id": 1214722,
+            "known_for_department": "Directing",
+            "name": "Seung Eun Kim",
+            "original_name": "Seung Eun Kim",
+            "popularity": 0.648,
+            "profile_path": null
+          }
+        ],
+        "guest_stars": [
+          {
+            "character": "",
+            "credit_id": "52571ee4760ee3776a1dfe37",
+            "order": 0,
+            "adult": false,
+            "gender": 2,
+            "id": 587,
+            "known_for_department": "Acting",
+            "name": "Edward James Olmos",
+            "original_name": "Edward James Olmos",
+            "popularity": 5.215,
+            "profile_path": "/mXnilUrQBIMLHSQkPjQk99mX70x.jpg"
+          },
+          {
+            "character": "",
+            "credit_id": "52571ee4760ee3776a1dfe59",
+            "order": 1,
+            "adult": false,
+            "gender": 2,
+            "id": 30488,
+            "known_for_department": "Acting",
+            "name": "Miguel Sandoval",
+            "original_name": "Miguel Sandoval",
+            "popularity": 3.605,
+            "profile_path": "/v5tHxTkgOqcdWgjoEhUj0a50NIK.jpg"
+          },
+          {
+            "character": "",
+            "credit_id": "52571ee4760ee3776a1dfe7b",
+            "order": 2,
+            "adult": false,
+            "gender": 2,
+            "id": 153606,
+            "known_for_department": "Acting",
+            "name": "Victor Brandt",
+            "original_name": "Victor Brandt",
+            "popularity": 0.955,
+            "profile_path": "/8Vc7ByZ9vDGor3vGYkggHKM4Syz.jpg"
+          }
+        ],
+        "id": 137907,
+        "name": "The Bat in the Belfry",
+        "overview": "After stopping a heist by Rupert Thorne, Batman returns to the batcave to learn that all criminals in Arkham Asylum have mysteriously been released. Batman finds out that it's a crazed clown named Joker whom released them, and he plans to make a blimp full of laughing gas to explode over Gotham so every citizen in turns into a lunatic. It's up to Batman to stop him.",
+        "production_code": "",
+        "season_number": 1,
+        "still_path": "/cAxBIAUsSIM3spc9XhVczHbljyG.jpg",
+        "vote_average": 6.4,
+        "vote_count": 8
+      }
+    ],
+    "name": "Season 1",
+    "overview": "",
+    "id": 6001,
+    "poster_path": "/1hePBrU6rr6iF3j3Qi2blt04lZQ.jpg",
+    "season_number": 1
+  }
