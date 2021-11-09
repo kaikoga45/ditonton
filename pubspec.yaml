@@ -50,8 +50,12 @@ dependencies:
     path: module/watchlist
 
 dev_dependencies:
+  bloc_test: ^8.5.0
+  build_runner: ^2.1.4
   flutter_driver:
     sdk: flutter
+  mockito: ^5.0.16
+  test: any
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -67,6 +71,7 @@ flutter:
   assets:
     - assets/
     - module/core/certificates/
+    - module/core/test/dummy_json/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see

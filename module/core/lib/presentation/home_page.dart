@@ -79,7 +79,6 @@ class _HomePageState extends State<HomePage> {
           IconButton(
             onPressed: () {
               Navigator.pushNamed(context, SEARCH);
-              throw Error();
             },
             icon: Icon(Icons.search),
           )
