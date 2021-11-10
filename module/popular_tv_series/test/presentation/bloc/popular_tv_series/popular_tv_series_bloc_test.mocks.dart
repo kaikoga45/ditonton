@@ -5,7 +5,6 @@
 import 'dart:async' as _i5;
 
 import 'package:core/core.dart' as _i2;
-import 'package:core/utils/failure.dart' as _i6;
 import 'package:dartz/dartz.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:popular_tv_series/domain/usecase/get_popular_tv_series.dart'
@@ -43,12 +42,12 @@ class MockGetPopularTvSeries extends _i1.Mock
       super.noSuchMethod(Invocation.setter(#repository, _repository),
           returnValueForMissingStub: null);
   @override
-  _i5.Future<_i3.Either<_i6.Failure, List<_i2.TvSeries>>> execute() =>
+  _i5.Future<_i3.Either<_i2.Failure, List<_i2.TvSeries>>> execute() =>
       (super.noSuchMethod(Invocation.method(#execute, []),
               returnValue:
-                  Future<_i3.Either<_i6.Failure, List<_i2.TvSeries>>>.value(
-                      _FakeEither_1<_i6.Failure, List<_i2.TvSeries>>()))
-          as _i5.Future<_i3.Either<_i6.Failure, List<_i2.TvSeries>>>);
+                  Future<_i3.Either<_i2.Failure, List<_i2.TvSeries>>>.value(
+                      _FakeEither_1<_i2.Failure, List<_i2.TvSeries>>()))
+          as _i5.Future<_i3.Either<_i2.Failure, List<_i2.TvSeries>>>);
   @override
   String toString() => super.toString();
 }
