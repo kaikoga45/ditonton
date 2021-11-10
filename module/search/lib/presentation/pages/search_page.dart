@@ -46,11 +46,15 @@ class SearchPage extends StatelessWidget {
                     builder: (context, state) {
                       if (state is SearchMoviesLoading) {
                         return Center(
-                          child: CircularProgressIndicator(),
+                          key: Key('center_sm'),
+                          child: CircularProgressIndicator(
+                            key: Key('progress_sm'),
+                          ),
                         );
                       } else if (state is SearchMoviesLoaded) {
                         final result = state.movies;
                         return ListView.builder(
+                          key: Key('sm'),
                           shrinkWrap: true,
                           physics: NeverScrollableScrollPhysics(),
                           padding: const EdgeInsets.all(8),
@@ -61,7 +65,10 @@ class SearchPage extends StatelessWidget {
                           itemCount: result.length,
                         );
                       } else if (state is SearchMoviesError) {
-                        return Text(state.message);
+                        return Text(
+                          state.message,
+                          key: Key('error_sm'),
+                        );
                       } else {
                         return Container();
                       }
@@ -71,11 +78,15 @@ class SearchPage extends StatelessWidget {
                     builder: (context, state) {
                       if (state is SearchTvSeriesLoading) {
                         return Center(
-                          child: CircularProgressIndicator(),
+                          key: Key('center_stv'),
+                          child: CircularProgressIndicator(
+                            key: Key('progress_stv'),
+                          ),
                         );
                       } else if (state is SearchTvSeriesLoaded) {
                         final result = state.tvSeries;
                         return ListView.builder(
+                          key: Key('stv'),
                           shrinkWrap: true,
                           physics: NeverScrollableScrollPhysics(),
                           padding: const EdgeInsets.all(8),
@@ -86,7 +97,10 @@ class SearchPage extends StatelessWidget {
                           itemCount: result.length,
                         );
                       } else if (state is SearchTvSeriesError) {
-                        return Text(state.message);
+                        return Text(
+                          state.message,
+                          key: Key('error_stv'),
+                        );
                       } else {
                         return Container();
                       }

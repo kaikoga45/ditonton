@@ -29,10 +29,14 @@ class _PopularMoviesPageState extends State<PopularMoviesPage> {
           builder: (_, state) {
             if (state is PopularMoviesLoading) {
               return Center(
-                child: CircularProgressIndicator(),
+                key: Key('center_pm'),
+                child: CircularProgressIndicator(
+                  key: Key('progress_pm'),
+                ),
               );
             } else if (state is PopularMoviesLoaded) {
               return ListView.builder(
+                key: Key('pm'),
                 itemBuilder: (context, index) {
                   final movie = state.movies[index];
                   return MovieCard(movie);
@@ -41,7 +45,7 @@ class _PopularMoviesPageState extends State<PopularMoviesPage> {
               );
             } else if (state is PopularMoviesError) {
               return Center(
-                key: Key('error_message'),
+                key: Key('error_pm'),
                 child: Text(state.message),
               );
             } else {

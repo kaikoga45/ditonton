@@ -34,12 +34,13 @@ class _TvSeriesListPageState extends State<TvSeriesListPage> {
         BlocBuilder<ListTvOnAirBloc, ListTvOnAirState>(builder: (_, state) {
           if (state is TvOnAirLoading) {
             return Center(
-              child: CircularProgressIndicator(),
+              key: Key('center_tva'),
+              child: CircularProgressIndicator(key: Key('progress_tva')),
             );
           } else if (state is TvOnAirLoaded) {
-            return TvSeriesList(state.tvOnAir);
+            return TvSeriesList(state.tvOnAir, Key('tva'));
           } else if (state is TvOnAirError) {
-            return Text(state.message);
+            return Text(state.message, key: Key('error_tva'));
           } else {
             return Container();
           }
@@ -54,12 +55,18 @@ class _TvSeriesListPageState extends State<TvSeriesListPage> {
             builder: (_, state) {
           if (state is PopularTvSeriesLoading) {
             return Center(
-              child: CircularProgressIndicator(),
+              key: Key('center_pts'),
+              child: CircularProgressIndicator(
+                key: Key('progress_pts'),
+              ),
             );
           } else if (state is PopularTvSeriesLoaded) {
-            return TvSeriesList(state.tvSeries);
+            return TvSeriesList(state.tvSeries, Key('pts'));
           } else if (state is PopularTvSeriesError) {
-            return Text(state.message);
+            return Text(
+              state.message,
+              key: Key('error_pts'),
+            );
           } else {
             return Container();
           }
@@ -74,12 +81,18 @@ class _TvSeriesListPageState extends State<TvSeriesListPage> {
             builder: (_, state) {
           if (state is TopRatedTvSeriesLoading) {
             return Center(
-              child: CircularProgressIndicator(),
+              key: Key('center_trts'),
+              child: CircularProgressIndicator(
+                key: Key('progress_trts'),
+              ),
             );
           } else if (state is TopRatedTvSeriesLoaded) {
-            return TvSeriesList(state.tvSeries);
+            return TvSeriesList(state.tvSeries, Key('trts'));
           } else if (state is TopRatedTvSeriesError) {
-            return Text(state.message);
+            return Text(
+              state.message,
+              key: Key('error_trts'),
+            );
           } else {
             return Container();
           }
@@ -112,12 +125,14 @@ class _TvSeriesListPageState extends State<TvSeriesListPage> {
 
 class TvSeriesList extends StatelessWidget {
   final List<TvSeries> tvSeries;
+  final Key key;
 
-  TvSeriesList(this.tvSeries);
+  TvSeriesList(this.tvSeries, this.key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: key,
       height: 200,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,

@@ -15,12 +15,12 @@ import 'tv_series_watchlist_bloc_test.mocks.dart';
 ])
 void main() {
   late TvSeriesWatchlistBloc tvSeriesWatchlistBloc;
-  late MockGetWatchListStatus mockGetWatchListStatus;
+  late MockGetTvSeriesWatchListStatus mockGetWatchListStatus;
   late MockSaveWatchlistTvSeries mockSaveWatchlistTvSeries;
   late MockRemoveWatchlistTvSerios mockRemoveWatchlistTvSeries;
 
   setUp(() {
-    mockGetWatchListStatus = MockGetWatchListStatus();
+    mockGetWatchListStatus = MockGetTvSeriesWatchListStatus();
     mockSaveWatchlistTvSeries = MockSaveWatchlistTvSeries();
     mockRemoveWatchlistTvSeries = MockRemoveWatchlistTvSerios();
 

@@ -14,10 +14,10 @@ import 'list_popular_movies_bloc_test.mocks.dart';
 ])
 void main() {
   late ListPopularMoviesBloc popularMoviesBloc;
-  late MockGetPopularMovies mockGetPopularMovie;
+  late MockGetListPopularMovies mockGetPopularMovie;
 
   setUp(() {
-    mockGetPopularMovie = MockGetPopularMovies();
+    mockGetPopularMovie = MockGetListPopularMovies();
     popularMoviesBloc = ListPopularMoviesBloc(
       getPopularMovies: mockGetPopularMovie,
     );

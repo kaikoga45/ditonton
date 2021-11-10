@@ -12,12 +12,12 @@ import 'movie_watchlist_bloc_test.mocks.dart';
     [GetMovieWatchListStatus, SaveWatchlistMovie, RemoveWatchlistMovie])
 void main() {
   late MovieWatchlistBloc movieWatchlistBloc;
-  late MockGetWatchListStatus mockGetWatchListStatus;
+  late MockGetMovieWatchListStatus mockGetWatchListStatus;
   late MockSaveWatchlistMovie mockSaveWatchlistMovie;
   late MockRemoveWatchlistMovie mockRemoveWatchlistMovie;
 
   setUp(() {
-    mockGetWatchListStatus = MockGetWatchListStatus();
+    mockGetWatchListStatus = MockGetMovieWatchListStatus();
     mockSaveWatchlistMovie = MockSaveWatchlistMovie();
     mockRemoveWatchlistMovie = MockRemoveWatchlistMovie();
 

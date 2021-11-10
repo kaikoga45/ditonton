@@ -116,10 +116,14 @@ class _DetailContentState extends State<DetailContent> {
                                 MovieWatchlistState>(builder: (context, state) {
                               if (state is MovieWatchlistLoading) {
                                 return Center(
-                                  child: CircularProgressIndicator(),
+                                  key: Key('center_mw'),
+                                  child: CircularProgressIndicator(
+                                    key: Key('cpi_mw'),
+                                  ),
                                 );
                               } else if (state is MovieWatchlistLoaded) {
                                 return ElevatedButton(
+                                  key: Key('watchlist_button_mw'),
                                   onPressed: () {
                                     if (state.watchlistStatus) {
                                       context
@@ -145,14 +149,21 @@ class _DetailContentState extends State<DetailContent> {
                                   child: Column(
                                     children: [
                                       state.watchlistStatus
-                                          ? Icon(Icons.check)
-                                          : Icon(Icons.add),
+                                          ? Icon(
+                                              Icons.check,
+                                              key: Key('check_mw'),
+                                            )
+                                          : Icon(
+                                              Icons.add,
+                                              key: Key('add_mw'),
+                                            ),
                                       Text('Watchlist')
                                     ],
                                   ),
                                 );
                               } else if (state is MovieWatchlistError) {
                                 return ElevatedButton(
+                                  key: Key('error_mw'),
                                   onPressed: () {},
                                   child: Column(
                                     children: [
@@ -203,12 +214,19 @@ class _DetailContentState extends State<DetailContent> {
                               builder: (context, state) {
                                 if (state is MovieRecommendationLoading) {
                                   return Center(
-                                    child: CircularProgressIndicator(),
+                                    key: Key('center_mr'),
+                                    child: CircularProgressIndicator(
+                                      key: Key('cpi_mr'),
+                                    ),
                                   );
                                 } else if (state is MovieRecommendationError) {
-                                  return Text(state.message);
+                                  return Text(
+                                    state.message,
+                                    key: Key('text_mr'),
+                                  );
                                 } else if (state is MovieRecommendationLoaded) {
                                   return Container(
+                                    key: Key('content_mr'),
                                     height: 150,
                                     child: ListView.builder(
                                       scrollDirection: Axis.horizontal,

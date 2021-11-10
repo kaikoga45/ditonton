@@ -5,7 +5,6 @@
 import 'dart:async' as _i5;
 
 import 'package:core/core.dart' as _i2;
-import 'package:core/utils/failure.dart' as _i6;
 import 'package:dartz/dartz.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:watchlist/domain/usecase/get_watchlist.dart' as _i4;
@@ -37,12 +36,12 @@ class MockGetWatchlist extends _i1.Mock implements _i4.GetWatchlist {
       Invocation.getter(#repository),
       returnValue: _FakeWatchlistRepository_0()) as _i2.WatchlistRepository);
   @override
-  _i5.Future<_i3.Either<_i6.Failure, List<_i2.Watchlist>>> execute() =>
+  _i5.Future<_i3.Either<_i2.Failure, List<_i2.Watchlist>>> execute() =>
       (super.noSuchMethod(Invocation.method(#execute, []),
               returnValue:
-                  Future<_i3.Either<_i6.Failure, List<_i2.Watchlist>>>.value(
-                      _FakeEither_1<_i6.Failure, List<_i2.Watchlist>>()))
-          as _i5.Future<_i3.Either<_i6.Failure, List<_i2.Watchlist>>>);
+                  Future<_i3.Either<_i2.Failure, List<_i2.Watchlist>>>.value(
+                      _FakeEither_1<_i2.Failure, List<_i2.Watchlist>>()))
+          as _i5.Future<_i3.Either<_i2.Failure, List<_i2.Watchlist>>>);
   @override
   String toString() => super.toString();
 }

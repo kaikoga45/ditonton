@@ -15,10 +15,10 @@ import 'list_top_rated_movies_bloc_test.mocks.dart';
 ])
 void main() {
   late ListTopRatedMoviesBloc topRatedMoviesBloc;
-  late MockGetTopRatedMovies mockGetTopRatedMovie;
+  late MockGetListTopRatedMovies mockGetTopRatedMovie;
 
   setUp(() {
-    mockGetTopRatedMovie = MockGetTopRatedMovies();
+    mockGetTopRatedMovie = MockGetListTopRatedMovies();
     topRatedMoviesBloc = ListTopRatedMoviesBloc(
       getTopRatedMovies: mockGetTopRatedMovie,
     );

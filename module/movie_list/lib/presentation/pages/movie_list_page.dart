@@ -39,12 +39,18 @@ class _MovieListPageState extends State<MovieListPage> {
             builder: (_, state) {
           if (state is NowPlayingMoviesLoading) {
             return Center(
-              child: CircularProgressIndicator(),
+              key: Key('center_npm'),
+              child: CircularProgressIndicator(
+                key: Key('progress_npm'),
+              ),
             );
           } else if (state is NowPlayingMoviesLoaded) {
-            return MovieList(state.movies);
+            return MovieList(state.movies, Key('npm'));
           } else if (state is NowPlayingMoviesError) {
-            return Text(state.message);
+            return Text(
+              state.message,
+              key: Key('error_npm'),
+            );
           } else {
             return Container();
           }
@@ -57,12 +63,18 @@ class _MovieListPageState extends State<MovieListPage> {
             builder: (_, state) {
           if (state is PopularMoviesLoading) {
             return Center(
-              child: CircularProgressIndicator(),
+              key: Key('center_pm'),
+              child: CircularProgressIndicator(
+                key: Key('progress_pm'),
+              ),
             );
           } else if (state is PopularMoviesLoaded) {
-            return MovieList(state.movies);
+            return MovieList(state.movies, Key('pm'));
           } else if (state is PopularMoviesError) {
-            return Text(state.message);
+            return Text(
+              state.message,
+              key: Key('error_pm'),
+            );
           } else {
             return Container();
           }
@@ -75,12 +87,21 @@ class _MovieListPageState extends State<MovieListPage> {
             builder: (_, state) {
           if (state is TopRatedMoviesLoading) {
             return Center(
-              child: CircularProgressIndicator(),
+              key: Key('center_trm'),
+              child: CircularProgressIndicator(
+                key: Key('progress_trm'),
+              ),
             );
           } else if (state is TopRatedMoviesLoaded) {
-            return MovieList(state.movies);
+            return MovieList(
+              state.movies,
+              Key('trm'),
+            );
           } else if (state is TopRatedMoviesError) {
-            return Text(state.message);
+            return Text(
+              state.message,
+              key: Key('error_trm'),
+            );
           } else {
             return Container();
           }
@@ -113,12 +134,14 @@ class _MovieListPageState extends State<MovieListPage> {
 
 class MovieList extends StatelessWidget {
   final List<Movie> movies;
+  final Key key;
 
-  MovieList(this.movies);
+  MovieList(this.movies, this.key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: key,
       height: 200,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,

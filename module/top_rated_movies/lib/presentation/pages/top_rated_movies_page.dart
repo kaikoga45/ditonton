@@ -28,10 +28,14 @@ class _TopRatedMoviesPageState extends State<TopRatedMoviesPage> {
           builder: (context, state) {
             if (state is TopRatedMoviesLoading) {
               return Center(
-                child: CircularProgressIndicator(),
+                key: Key('center_trm'),
+                child: CircularProgressIndicator(
+                  key: Key('progress_trm'),
+                ),
               );
             } else if (state is TopRatedMoviesLoaded) {
               return ListView.builder(
+                key: Key('trm'),
                 itemBuilder: (context, index) {
                   final movie = state.movies[index];
                   return MovieCard(movie);
@@ -40,7 +44,7 @@ class _TopRatedMoviesPageState extends State<TopRatedMoviesPage> {
               );
             } else if (state is TopRatedMoviesError) {
               return Center(
-                key: Key('error_message'),
+                key: Key('error_trm'),
                 child: Text(state.message),
               );
             } else {

@@ -15,10 +15,10 @@ import 'list_now_playing_movies_bloc_test.mocks.dart';
 ])
 void main() {
   late ListNowPlayingMoviesBloc nowPlayingMoviesBloc;
-  late MockGetNowPlayingMovies mockGetNowPlayingMovie;
+  late MockGetListNowPlayingMovies mockGetNowPlayingMovie;
 
   setUp(() {
-    mockGetNowPlayingMovie = MockGetNowPlayingMovies();
+    mockGetNowPlayingMovie = MockGetListNowPlayingMovies();
     nowPlayingMoviesBloc = ListNowPlayingMoviesBloc(
       getNowPlayingMovies: mockGetNowPlayingMovie,
     );

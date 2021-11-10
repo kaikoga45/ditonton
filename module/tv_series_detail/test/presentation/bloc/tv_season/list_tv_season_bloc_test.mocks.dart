@@ -5,6 +5,7 @@
 import 'dart:async' as _i5;
 
 import 'package:core/core.dart' as _i2;
+import 'package:core/utils/failure.dart' as _i6;
 import 'package:dartz/dartz.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:tv_series_detail/domain/usecase/get_tv_season.dart' as _i4;
@@ -36,13 +37,13 @@ class MockGetTvSeason extends _i1.Mock implements _i4.GetTvSeason {
       (super.noSuchMethod(Invocation.getter(#repository),
           returnValue: _FakeTvSeriesRepository_0()) as _i2.TvSeriesRepository);
   @override
-  _i5.Future<_i3.Either<_i2.Failure, List<_i2.TvSeason>>> execute(
+  _i5.Future<_i3.Either<_i6.Failure, List<_i2.TvSeason>>> execute(
           int? id, int? totalSeason) =>
       (super.noSuchMethod(Invocation.method(#execute, [id, totalSeason]),
               returnValue:
-                  Future<_i3.Either<_i2.Failure, List<_i2.TvSeason>>>.value(
-                      _FakeEither_1<_i2.Failure, List<_i2.TvSeason>>()))
-          as _i5.Future<_i3.Either<_i2.Failure, List<_i2.TvSeason>>>);
+                  Future<_i3.Either<_i6.Failure, List<_i2.TvSeason>>>.value(
+                      _FakeEither_1<_i6.Failure, List<_i2.TvSeason>>()))
+          as _i5.Future<_i3.Either<_i6.Failure, List<_i2.TvSeason>>>);
   @override
   String toString() => super.toString();
 }

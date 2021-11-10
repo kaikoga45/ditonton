@@ -28,10 +28,14 @@ class _PopularTvSeriesPageState extends State<PopularTvSeriesPage> {
           builder: (context, state) {
             if (state is PopularTvSeriesLoading) {
               return Center(
-                child: CircularProgressIndicator(),
+                key: Key('center_ptvs'),
+                child: CircularProgressIndicator(
+                  key: Key('progress_ptvs'),
+                ),
               );
             } else if (state is PopularTvSeriesLoaded) {
               return ListView.builder(
+                key: Key('ptvs'),
                 itemBuilder: (context, index) {
                   final tv = state.tvSeries[index];
                   return TvSeriesCard(tv);
@@ -40,7 +44,7 @@ class _PopularTvSeriesPageState extends State<PopularTvSeriesPage> {
               );
             } else if (state is PopularTvSeriesError) {
               return Center(
-                key: Key('error_message'),
+                key: Key('error_ptvs'),
                 child: Text(state.message),
               );
             } else {

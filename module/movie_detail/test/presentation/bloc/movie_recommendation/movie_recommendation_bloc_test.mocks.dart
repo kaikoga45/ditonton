@@ -5,12 +5,11 @@
 import 'dart:async' as _i5;
 
 import 'package:core/core.dart' as _i2;
-import 'package:core/utils/failure.dart' as _i6;
 import 'package:dartz/dartz.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:movie_detail/domain/usecase/get_movie_detail.dart' as _i4;
 import 'package:movie_detail/domain/usecase/get_movie_recommendations.dart'
-    as _i7;
+    as _i6;
 
 // ignore_for_file: avoid_redundant_argument_values
 // ignore_for_file: avoid_setters_without_getters
@@ -38,11 +37,11 @@ class MockGetMovieDetail extends _i1.Mock implements _i4.GetMovieDetail {
       (super.noSuchMethod(Invocation.getter(#repository),
           returnValue: _FakeMovieRepository_0()) as _i2.MovieRepository);
   @override
-  _i5.Future<_i3.Either<_i6.Failure, _i2.MovieDetail>> execute(int? id) =>
+  _i5.Future<_i3.Either<_i2.Failure, _i2.MovieDetail>> execute(int? id) =>
       (super.noSuchMethod(Invocation.method(#execute, [id]),
-          returnValue: Future<_i3.Either<_i6.Failure, _i2.MovieDetail>>.value(
-              _FakeEither_1<_i6.Failure, _i2.MovieDetail>())) as _i5
-          .Future<_i3.Either<_i6.Failure, _i2.MovieDetail>>);
+          returnValue: Future<_i3.Either<_i2.Failure, _i2.MovieDetail>>.value(
+              _FakeEither_1<_i2.Failure, _i2.MovieDetail>())) as _i5
+          .Future<_i3.Either<_i2.Failure, _i2.MovieDetail>>);
   @override
   String toString() => super.toString();
 }
@@ -51,7 +50,7 @@ class MockGetMovieDetail extends _i1.Mock implements _i4.GetMovieDetail {
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockGetMovieRecommendations extends _i1.Mock
-    implements _i7.GetMovieRecommendations {
+    implements _i6.GetMovieRecommendations {
   MockGetMovieRecommendations() {
     _i1.throwOnMissingStub(this);
   }
@@ -61,11 +60,11 @@ class MockGetMovieRecommendations extends _i1.Mock
       (super.noSuchMethod(Invocation.getter(#repository),
           returnValue: _FakeMovieRepository_0()) as _i2.MovieRepository);
   @override
-  _i5.Future<_i3.Either<_i6.Failure, List<_i2.Movie>>> execute(dynamic id) =>
+  _i5.Future<_i3.Either<_i2.Failure, List<_i2.Movie>>> execute(dynamic id) =>
       (super.noSuchMethod(Invocation.method(#execute, [id]),
-          returnValue: Future<_i3.Either<_i6.Failure, List<_i2.Movie>>>.value(
-              _FakeEither_1<_i6.Failure, List<_i2.Movie>>())) as _i5
-          .Future<_i3.Either<_i6.Failure, List<_i2.Movie>>>);
+          returnValue: Future<_i3.Either<_i2.Failure, List<_i2.Movie>>>.value(
+              _FakeEither_1<_i2.Failure, List<_i2.Movie>>())) as _i5
+          .Future<_i3.Either<_i2.Failure, List<_i2.Movie>>>);
   @override
   String toString() => super.toString();
 }

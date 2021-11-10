@@ -25,12 +25,12 @@ class _FakeTvSeriesRepository_0 extends _i1.Fake
 
 class _FakeEither_1<L, R> extends _i1.Fake implements _i3.Either<L, R> {}
 
-/// A class which mocks [GetPopularTvSeries].
+/// A class which mocks [GetListPopularTvSeries].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockGetPopularTvSeries extends _i1.Mock
+class MockGetListPopularTvSeries extends _i1.Mock
     implements _i4.GetListPopularTvSeries {
-  MockGetPopularTvSeries() {
+  MockGetListPopularTvSeries() {
     _i1.throwOnMissingStub(this);
   }
 

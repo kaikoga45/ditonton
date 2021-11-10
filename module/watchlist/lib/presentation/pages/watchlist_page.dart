@@ -28,10 +28,14 @@ class _WatchlistPageState extends State<WatchlistPage> {
           builder: (context, state) {
             if (state is WatchlistLoading) {
               return Center(
-                child: CircularProgressIndicator(),
+                key: Key('center_wl'),
+                child: CircularProgressIndicator(
+                  key: Key('progress_wl'),
+                ),
               );
             } else if (state is WatchlistLoaded) {
               return ListView.builder(
+                key: Key('wl'),
                 itemBuilder: (context, index) {
                   final watchList = state.watchlist[index];
                   return WatchlistCard(
@@ -42,7 +46,7 @@ class _WatchlistPageState extends State<WatchlistPage> {
               );
             } else if (state is WatchlistError) {
               return Center(
-                key: Key('error_message'),
+                key: Key('error_wl'),
                 child: Text(state.message),
               );
             }

@@ -32,9 +32,11 @@ void main() {
     }
 
     blocTest<MovieDetailBloc, MovieDetailState>(
-      'should get data from the usecase',
+      'should get data from the event',
       build: () {
-        arrangeUseCase();
+        when(mockGetMovieDetail.execute(tId))
+            .thenAnswer((_) async => Right(tMovieDetail));
+
         return movieDetailBloc;
       },
       act: (bloc) => bloc.add(FetchMovieDetail(id: tId)),

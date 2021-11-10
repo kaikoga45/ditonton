@@ -11,10 +11,10 @@ import 'list_popular_tv_series_bloc_test.mocks.dart';
 @GenerateMocks([GetListPopularTvSeries])
 void main() {
   late ListPopularTvSeriesBloc listPopularTvSeriesBloc;
-  late MockGetPopularTvSeries mockGetPopularTvSeries;
+  late MockGetListPopularTvSeries mockGetPopularTvSeries;
 
   setUp(() {
-    mockGetPopularTvSeries = MockGetPopularTvSeries();
+    mockGetPopularTvSeries = MockGetListPopularTvSeries();
     listPopularTvSeriesBloc =
         ListPopularTvSeriesBloc(getPopularTvSeries: mockGetPopularTvSeries);
   });

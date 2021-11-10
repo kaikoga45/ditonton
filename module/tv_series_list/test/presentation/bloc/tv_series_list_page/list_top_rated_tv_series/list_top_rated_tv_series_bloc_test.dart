@@ -11,10 +11,10 @@ import 'list_top_rated_tv_series_bloc_test.mocks.dart';
 @GenerateMocks([GetListTopRatedTvSeries])
 void main() {
   late ListTopRatedTvSeriesBloc listTopRatedTvSeriesBloc;
-  late MockGetTopRatedTvSeries mockGetTopRatedTvSeries;
+  late MockGetListTopRatedTvSeries mockGetTopRatedTvSeries;
 
   setUp(() {
-    mockGetTopRatedTvSeries = MockGetTopRatedTvSeries();
+    mockGetTopRatedTvSeries = MockGetListTopRatedTvSeries();
     listTopRatedTvSeriesBloc =
         ListTopRatedTvSeriesBloc(getTopRatedTvSeries: mockGetTopRatedTvSeries);
   });

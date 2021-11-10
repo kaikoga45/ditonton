@@ -5,7 +5,6 @@
 import 'dart:async' as _i5;
 
 import 'package:core/core.dart' as _i2;
-import 'package:core/utils/failure.dart' as _i6;
 import 'package:dartz/dartz.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:movie_detail/domain/usecase/get_movie_detail.dart' as _i4;
@@ -36,11 +35,11 @@ class MockGetMovieDetail extends _i1.Mock implements _i4.GetMovieDetail {
       (super.noSuchMethod(Invocation.getter(#repository),
           returnValue: _FakeMovieRepository_0()) as _i2.MovieRepository);
   @override
-  _i5.Future<_i3.Either<_i6.Failure, _i2.MovieDetail>> execute(int? id) =>
+  _i5.Future<_i3.Either<_i2.Failure, _i2.MovieDetail>> execute(int? id) =>
       (super.noSuchMethod(Invocation.method(#execute, [id]),
-          returnValue: Future<_i3.Either<_i6.Failure, _i2.MovieDetail>>.value(
-              _FakeEither_1<_i6.Failure, _i2.MovieDetail>())) as _i5
-          .Future<_i3.Either<_i6.Failure, _i2.MovieDetail>>);
+          returnValue: Future<_i3.Either<_i2.Failure, _i2.MovieDetail>>.value(
+              _FakeEither_1<_i2.Failure, _i2.MovieDetail>())) as _i5
+          .Future<_i3.Either<_i2.Failure, _i2.MovieDetail>>);
   @override
   String toString() => super.toString();
 }

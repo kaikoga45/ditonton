@@ -134,10 +134,14 @@ class _DetailContentState extends State<DetailContent> {
                                 builder: (context, state) {
                               if (state is TvSeriesWatchlistLoading) {
                                 return Center(
-                                  child: CircularProgressIndicator(),
+                                  key: Key('center_tvm'),
+                                  child: CircularProgressIndicator(
+                                    key: Key('cpi_tvm'),
+                                  ),
                                 );
                               } else if (state is TvSeriesWatchlistLoaded) {
                                 return ElevatedButton(
+                                  key: Key('watchlist_button_tvm'),
                                   onPressed: () {
                                     if (state.watchlistStatus) {
                                       context
@@ -164,14 +168,21 @@ class _DetailContentState extends State<DetailContent> {
                                   child: Column(
                                     children: [
                                       state.watchlistStatus
-                                          ? Icon(Icons.check)
-                                          : Icon(Icons.add),
+                                          ? Icon(
+                                              Icons.check,
+                                              key: Key('check_tvm'),
+                                            )
+                                          : Icon(
+                                              Icons.add,
+                                              key: Key('add_tvm'),
+                                            ),
                                       Text('Watchlist')
                                     ],
                                   ),
                                 );
                               } else if (state is TvSeriesWatchlistError) {
                                 return ElevatedButton(
+                                  key: Key('error_tvm'),
                                   onPressed: () {},
                                   child: Column(
                                     children: [
@@ -218,9 +229,11 @@ class _DetailContentState extends State<DetailContent> {
                                 indicatorColor: kMikadoYellow,
                                 tabs: [
                                   Tab(
+                                    key: Key('tab_episode'),
                                     text: 'Episodes',
                                   ),
                                   Tab(
+                                    key: Key('tab_recommendation'),
                                     text: 'Recommendation',
                                   )
                                 ],
@@ -300,15 +313,16 @@ class RecommendationContent extends StatelessWidget {
       builder: (context, state) {
         if (state is TvSeriesRecommendationLoading) {
           return Center(
-            key: Key('center_recommendation_content'),
+            key: Key('center_tvr'),
             child: CircularProgressIndicator(
-              key: Key('progress_bar_recommendation_content'),
+              key: Key('cpi_tvr'),
             ),
           );
         } else if (state is TvSeriesRecommendationError) {
-          return Text(state.message, key: Key('error_recommendation_content'));
+          return Text(state.message, key: Key('text_tvr'));
         } else if (state is TvSeriesRecommendationLoaded) {
           return Column(
+            key: Key('content_tvr'),
             children: [
               Expanded(
                 flex: 1,
@@ -358,17 +372,18 @@ class _TvSeasonContentState extends State<TvSeasonContent> {
       builder: (context, state) {
         if (state is ListTvSeasonLoading) {
           return Center(
-            key: Key('center_tv_season_content'),
+            key: Key('center_tvs'),
             child: CircularProgressIndicator(
-              key: Key('progress_bar_tv_season_content'),
+              key: Key('cpi_tvs'),
             ),
           );
         } else if (state is ListTvSeasonError) {
-          return Text(state.message, key: Key('error_tv_season_content'));
+          return Text(state.message, key: Key('error_tvs'));
         } else if (state is ListTvSeasonLoaded) {
           final tvSeason = state.tvSeasons[selectedIndex - 1];
           final items = setTotalDropdownMenuItem(state.tvSeasons.length);
           return Column(
+            key: Key('content_tvs'),
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Card(
