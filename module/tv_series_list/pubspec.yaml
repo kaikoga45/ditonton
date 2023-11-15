@@ -19,13 +19,13 @@ dependencies:
   flutter_bloc: ^7.3.3
 
 dev_dependencies:
-  bloc_test: ^8.5.0
+  bloc_test: ^9.1.5
   build_runner: ^2.1.4
   flutter_lints: ^1.0.0
   flutter_test:
     sdk: flutter
   mockito: ^5.0.16
-  test_cov_console: ^0.1.5
+  test_cov_console: ^0.2.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

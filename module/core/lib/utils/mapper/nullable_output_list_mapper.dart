@@ -16,5 +16,6 @@ class NullableOutputListMapperImpl<I, O>
     }
 
     input.map((e) => mapper.map(e));
+    return null;
   }
 }

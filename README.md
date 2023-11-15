@@ -1,1 +1,38 @@
+# Ditonton
+
+Ditonton is a Flutter application designed to help users find detailed
+information about films and TV shows. It provides data on currently playing,
+popular, and top-rated shows, including length, total duration, IMDb rating,
+overview, and recommendations. Users can search for their preferred shows or
+films and add them to a watchlist for easy access.
+
+## Demo
+
+[![Watch the video](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
+
+## Screenshots
+
+<!-- Add your screenshots here -->
+
+![Screenshot 1](url-to-screenshot-1.png)
+![Screenshot 2](url-to-screenshot-2.png)
+
+## Features
+
+- Lookup information for films & TV shows (now playing, popular, top-rated)
+- Detailed information such as length, total duration, IMDb rating, overview,
+  and recommendations
+- Search functionality for preferred TV shows or films
+- Add to watchlist feature
+
+## Best Practices and Libraries Implemented
+
+- Clean Architecture: Used for design pattern and dependency injection
+- Test-Driven Development (TDD)
+- Reactive Programming: BLoC pattern implemented
+- Continuous Integration: Codemagic & Github
+- Performance: Optimized for fast response times
+- Security: Encryption, Obfuscation, SSL Pinning
+- Post-Development: Firebase Analytics for understanding user behavior
+
 [![Codemagic build status](https://api.codemagic.io/apps/6183f656f780e440d63fc82d/6183f656f780e440d63fc82c/status_badge.svg)](https://codemagic.io/apps/6183f656f780e440d63fc82d/6183f656f780e440d63fc82c/latest_build)

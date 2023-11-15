@@ -1,11 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:provider/provider.dart';
-import 'package:tv_series_detail/presentation/bloc/tv_series_recommendation/tv_series_recommendation_bloc.dart';
 import 'package:tv_series_detail/tv_series_detail.dart';
 
 class TvSeriesDetailPage extends StatefulWidget {
@@ -92,15 +89,17 @@ class _DetailContentState extends State<DetailContent> {
     final screenHeight = MediaQuery.of(context).size.height;
     return Stack(
       children: [
-        CachedNetworkImage(
-          imageUrl:
-              'https://image.tmdb.org/t/p/w500${widget.tvSeries.posterPath}',
-          width: screenWidth,
-          placeholder: (context, url) => Center(
-            child: CircularProgressIndicator(),
-          ),
-          errorWidget: (context, url, error) => Icon(Icons.error),
-        ),
+        widget.tvSeries.posterPath.isEmpty
+            ? Placeholder()
+            : CachedNetworkImage(
+                imageUrl:
+                    'https://image.tmdb.org/t/p/w500${widget.tvSeries.posterPath}',
+                width: screenWidth,
+                placeholder: (context, url) => Center(
+                  child: CircularProgressIndicator(),
+                ),
+                errorWidget: (context, url, error) => Icon(Icons.error),
+              ),
         Container(
           margin: const EdgeInsets.only(top: 48 + 8),
           child: DraggableScrollableSheet(
@@ -469,16 +468,21 @@ class TvEpisodeCard extends StatelessWidget {
           Row(
             children: [
               ClipRRect(
-                child: CachedNetworkImage(
-                  imageUrl: '$BASE_IMAGE_URL${episode.stillPath}',
-                  width: 150,
-                  height: 80,
-                  fit: BoxFit.fitHeight,
-                  placeholder: (context, url) => Center(
-                    child: CircularProgressIndicator(),
-                  ),
-                  errorWidget: (context, url, error) => Icon(Icons.error),
-                ),
+                child: episode.stillPath.isEmpty
+                    ? Placeholder(
+                        fallbackHeight: 80,
+                        fallbackWidth: 150,
+                      )
+                    : CachedNetworkImage(
+                        imageUrl: '$BASE_IMAGE_URL${episode.stillPath}',
+                        width: 150,
+                        height: 80,
+                        fit: BoxFit.fitHeight,
+                        placeholder: (context, url) => Center(
+                          child: CircularProgressIndicator(),
+                        ),
+                        errorWidget: (context, url, error) => Icon(Icons.error),
+                      ),
                 borderRadius: BorderRadius.all(Radius.circular(8)),
               ),
               SizedBox(width: 15),
@@ -519,14 +523,18 @@ class RecommendationCard extends StatelessWidget {
           borderRadius: BorderRadius.all(
             Radius.circular(8),
           ),
-          child: CachedNetworkImage(
-            imageUrl:
-                'https://image.tmdb.org/t/p/w500${tvSeriesRecommendation.posterPath}',
-            placeholder: (context, url) => Center(
-              child: CircularProgressIndicator(),
-            ),
-            errorWidget: (context, url, error) => Icon(Icons.error),
-          ),
+          child: tvSeriesRecommendation.posterPath?.isEmpty ?? false
+              ? Placeholder(
+                  fallbackWidth: 250,
+                )
+              : CachedNetworkImage(
+                  imageUrl:
+                      'https://image.tmdb.org/t/p/w500${tvSeriesRecommendation.posterPath}',
+                  placeholder: (context, url) => Center(
+                    child: CircularProgressIndicator(),
+                  ),
+                  errorWidget: (context, url, error) => Icon(Icons.error),
+                ),
         ),
       ),
     );

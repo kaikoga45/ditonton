@@ -1,5 +1,4 @@
 import 'package:core/core.dart';
-import 'package:core/utils/failure.dart';
 import 'package:dartz/dartz.dart';
 
 class SearchMovies {

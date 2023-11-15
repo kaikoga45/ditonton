@@ -1,6 +1,4 @@
 import 'package:core/core.dart';
-import 'package:core/utils/failure.dart';
-import 'package:core/utils/state_enum.dart';
 import 'package:dartz/dartz.dart';
 
 abstract class WatchlistRepository {

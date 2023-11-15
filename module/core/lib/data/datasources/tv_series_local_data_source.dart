@@ -1,4 +1,3 @@
-import 'package:core/utils/exception.dart';
 import 'package:core/core.dart';
 
 abstract class TvSeriesLocalDataSource {
