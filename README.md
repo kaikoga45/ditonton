@@ -27,5 +27,3 @@ films and add them to a watchlist for easy access.
 - Performance: Optimized for fast response times
 - Security: Encryption, Obfuscation, SSL Pinning
 - Post-Development: Firebase Analytics for understanding user behavior
-
-[![Codemagic build status](https://api.codemagic.io/apps/6183f656f780e440d63fc82d/6183f656f780e440d63fc82c/status_badge.svg)](https://codemagic.io/apps/6183f656f780e440d63fc82d/6183f656f780e440d63fc82c/latest_build)
