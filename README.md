@@ -8,14 +8,7 @@ films and add them to a watchlist for easy access.
 
 ## Demo
 
-[![Watch the video](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
-
-## Screenshots
-
-<!-- Add your screenshots here -->
-
-![Screenshot 1](url-to-screenshot-1.png)
-![Screenshot 2](url-to-screenshot-2.png)
+[![Watch the video](https://img.youtube.com/vi/3agwA9XDDfA/0.jpg)](https://www.youtube.com/shorts/3agwA9XDDfA)
 
 ## Features
 
