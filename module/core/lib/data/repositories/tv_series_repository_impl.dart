@@ -1,7 +1,5 @@
 import 'dart:io';
 
-import 'package:core/utils/exception.dart';
-import 'package:core/utils/failure.dart';
 import 'package:core/core.dart';
 import 'package:dartz/dartz.dart';
 

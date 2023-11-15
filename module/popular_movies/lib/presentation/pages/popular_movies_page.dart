@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:popular_movies/popular_movies.dart';
-import 'package:provider/provider.dart';
 
 class PopularMoviesPage extends StatefulWidget {
   static const ROUTE_NAME = '/popular-movie';

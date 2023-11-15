@@ -1,5 +1,4 @@
 import 'package:core/core.dart';
-import 'package:core/utils/exception.dart';
 
 abstract class MovieLocalDataSource {
   Future<String> insertWatchlist(MovieTable movie);

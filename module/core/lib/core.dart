@@ -39,8 +39,6 @@ export 'domain/entities/tv_season.dart';
 export 'domain/entities/tv_series_detail.dart';
 export 'domain/repositories/movie_repository.dart';
 export 'domain/repositories/tv_series_repository.dart';
-export 'domain/repositories/movie_repository.dart';
-export 'domain/repositories/tv_series_repository.dart';
 export 'domain/repositories/watchlist_repository.dart';
 export 'presentation/about_page.dart';
 

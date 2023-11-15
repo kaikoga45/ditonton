@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:core/core.dart';
-import 'package:core/utils/encrypt.dart';
 import 'package:sqflite_sqlcipher/sqflite.dart';
 
 class DatabaseHelper {

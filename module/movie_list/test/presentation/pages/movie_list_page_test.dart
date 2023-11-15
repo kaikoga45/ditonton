@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:movie_list/movie_list.dart';
-import 'package:movie_list/presentation/bloc/list_now_playing_movies/list_now_playing_movies_bloc.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:provider/provider.dart';
 

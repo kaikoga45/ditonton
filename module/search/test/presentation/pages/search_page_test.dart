@@ -6,7 +6,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:provider/provider.dart';
-import 'package:search/presentation/bloc/search_movies/search_movies_bloc.dart';
 import 'package:search/search.dart';
 
 class MockSearchMoviesBloc
